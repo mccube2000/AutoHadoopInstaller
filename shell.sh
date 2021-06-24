@@ -2,7 +2,7 @@
 #====================================
 #     Hadoop自动安装V2.0 by:MC_cubes
 #====================================
-
+# Hadoop版本
 HADOOP_V='2.8.5'
 # 获取当前目录
 echo "当前目录:"
@@ -61,7 +61,7 @@ echo $hostName
 mkdir $BASE_PATH/.ssh/
 cd $BASE_PATH/.ssh/
 if [ ! -e "authorized_keys" ];then
-	# SSH免密码登录配置
+  # SSH免密码登录配置
   ssh=`command -v ssh` 
   if [ -n "$ssh" ];then
     apt=`command -v apt-get` 
@@ -72,9 +72,9 @@ if [ ! -e "authorized_keys" ];then
       sudo yum install openssh-server
     else
       echo "===ERROR==="
-	    echo "找不到apt-get和yum"
-	    echo "No path to apt-get or yum";
-	    echo "===ERROR==="
+      echo "找不到apt-get和yum"
+      echo "No path to apt-get or yum";
+      echo "===ERROR==="
       exit 0; 
     fi
   fi
@@ -97,13 +97,13 @@ fi
 cd ~
 echo ""
 if [ ! -e "${BASE_PATH}/hadoop-${HADOOP_V}.tar.gz" ];then
-	echo "===ERROR==="
-	echo "找不到 hadoop-${HADOOP_V}.tar.gz"
-	echo "Can't find hadoop-${HADOOP_V}.tar.gz"
-	echo "===ERROR==="
-	echo "脚本停止执行"
+  echo "===ERROR==="
+  echo "找不到 hadoop-${HADOOP_V}.tar.gz"
+  echo "Can't find hadoop-${HADOOP_V}.tar.gz"
+  echo "===ERROR==="
+  echo "脚本停止执行"
   echo "Shell stop"
-	exit 0
+  exit 0
 fi
 
 if [ ! -d "hadoop/" ];then
@@ -153,9 +153,9 @@ if [ ! "$(hadoop version | head -n 1)" == "Hadoop 2.8.5" ];then
   echo "获取hadoop版本失败,安装失败!"
   echo "Failed to get Hadoop version, failed to install!"
   echo "===ERROR==="
-	echo "脚本停止执行"
+  echo "脚本停止执行"
   echo "Shell stop"
-	exit 0
+  exit 0
 else
   echo "获取hadoop版本成功!"
   echo "Get Hadoop version successfully!"
