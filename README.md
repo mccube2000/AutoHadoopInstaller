@@ -1,4 +1,3 @@
-@[TOC](Hadoop全自动安装)
 
 # 脚本简介
 
@@ -20,8 +19,8 @@ $JAVA_HOME
 ping www.baidu.com
 ping $(hostname)
 ```
-&ensp;&ensp;如果ping不通百度，可以设置一下DNS再试试。
-&ensp;&ensp;如果ping不通自己的主机名，可以修改一下`/etc/hostname`和`/etc/hosts`。
+&ensp;&ensp;如果ping不通百度，可以设置一下DNS再试试。  
+&ensp;&ensp;如果ping不通自己的主机名，可以修改一下`/etc/hostname`和`/etc/hosts`。  
 ## Hadoop安装文件
 &ensp;&ensp;将文件名如`hadoop-2.8.5.tar.gz`的Hadoop安装文件放在运行脚本用户的用户文件夹下(~)。如果版本不是`2.8.5`，可以在脚本第六行修改。
 # 脚本运行
@@ -46,9 +45,3 @@ ping $(hostname)
 &ensp;&ensp;即可初始化并运行Hadoop
 # 脚本下载
 &ensp;&ensp;可以直接前往我的[GitHub](https://mp.csdn.net/console/configBlog)下载脚本，希望大家能给我一个`Star`。如果上不去或者想要支持作者的话，可以在[这里](https://mp.csdn.net/console/configBlog)下载。
-
-去[博客设置](https://mp.csdn.net/console/configBlog)页面，选择一款你喜欢的代码片高亮样式，下面展示同样高亮的 `代码片`.
-```javascript
-// An highlighted block
-var foo = 'bar';
-```
