@@ -148,7 +148,7 @@ source $HADOOP_PATH/etc/hadoop/hadoop-env.sh
 echo ""
 
 # hadoop获取版本测试
-if [ ! "$(hadoop version | head -n 1)" == "Hadoop 2.8.5" ];then
+if [ ! "$(hadoop version | head -n 1)" == "Hadoop ${HADOOP_V}" ];then
   echo "===ERROR==="
   echo "获取hadoop版本失败,安装失败!"
   echo "Failed to get Hadoop version, failed to install!"
